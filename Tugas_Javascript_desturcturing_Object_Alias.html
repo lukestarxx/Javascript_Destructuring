@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mahasiswa</title>
+</head>
+<body>
+    <script>
+
+        const mahasiswa1 = {
+            Nama : "Arif Sentosa",
+            Umur : "30 Tahun",
+            Tempat_Tanggal_Lahir : {
+                Tempat : "Lampung",
+                Tanggal_Lahir : "1 Januari 1993"
+            },
+       
+        }
+
+        const mahasiswa2 = {
+            Nama : "Nurul Diah Ayu",
+            Umur : "30 Tahun",
+            Tempat_Tanggal_Lahir : {
+                Tempat : "Bekasi",
+                Tanggal_Lahir : "1 Mei 1993"
+            },
+            Jenis_Kelamin : "Perempuan",
+        }
+
+        function printInfoMahasiswa1 ({Nama, Umur, Tempat_Tanggal_Lahir:{Tempat}, Jenis_Kelamin = "Jenis Kelamin : Pria"}){
+            console.log (Nama,Umur, Tempat, Jenis_Kelamin)
+        }
+        printInfoMahasiswa1 (mahasiswa1)
+
+        function printInfoMahasiswa2 ({Nama, Umur, Tempat_Tanggal_Lahir:{Tanggal_Lahir}, Jenis_Kelamin:gender}){
+            console.log (Nama,Umur, Tanggal_Lahir, gender)
+        }
+        printInfoMahasiswa2(mahasiswa2)
+
+    </script>
+    
+</body>
+</html>
