@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const Baju = 100000;
+        const Celana = 80000;
+
+
+        const diskonbaju = Baju < 5 ? (20/100) : "Harga Normal";
+        const diskoncelana = Celana < 5 ? (15/100) : "Harga Normal";
+
+        const listpembeli = [{
+            Nama : "Andri",
+            Pakaian : Celana,
+            Total : 2,
+        },
+
+        {
+            Nama : "Seele",
+            Pakaian : Baju,
+            Total : 10,
+        },
+
+        {
+            Nama : "Steele",
+            Pakaian : Celana,
+            Total : 8,
+        },
+    ]
+
+    const totalpembeli = listpembeli.map((list) => list.Total > 5 ? "dapat diskon " + (list.Total * Baju) * (20/100)  : "Tidak Dapat diskon" && list.Total > 5 ? "dapat diskon " + (list.Total * Celana) * (15/100)  : "Tidak Dapat diskon");
+    const filterpembeli = listpembeli.filter((list)=> list.Total > 5);
+    console.log(listpembeli);
+    console.log(totalpembeli, filterpembeli);
+    </script>
+    
+</body>
+</html>
